@@ -61,4 +61,5 @@ nav ul li a {
     pointer-events: none;
     transform: translate(-50%, -50%);
     transition: transform 0.1s ease;
+    z-index: 1000;
 }
