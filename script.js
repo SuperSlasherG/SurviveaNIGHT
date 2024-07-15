@@ -1,4 +1,10 @@
 document.addEventListener('mousemove', function(e) {
     const bubble = document.getElementById('bubble');
-    bubble.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+    if (bubble) {
+        bubble.style.left = e.clientX + 'px';
+        bubble.style.top = e.clientY + 'px';
+    } else {
+        console.error('Bubble element not found');
+    }
 });
+
