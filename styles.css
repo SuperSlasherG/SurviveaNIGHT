@@ -5,22 +5,25 @@ body, html {
     overflow: hidden;
     background-color: black;
     font-family: Arial, sans-serif;
+    color: white; /* Set default text color to white */
 }
 
 nav {
     position: fixed;
     top: 10px;
-    left: 10px;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 1000;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
+    display: flex;
 }
 
 nav ul li {
-    display: inline;
     margin-right: 20px;
 }
 
@@ -41,6 +44,12 @@ nav ul li a {
     width: 50%;
     height: 100%;
     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .left {
@@ -50,6 +59,10 @@ nav ul li a {
 
 .right {
     right: 0;
+}
+
+.content {
+    max-width: 600px;
 }
 
 #bubble {
