@@ -1,3 +1,22 @@
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bubbleColorChange {
+    0% { background-color: white; }
+    25% { background-color: red; }
+    50% { background-color: blue; }
+    75% { background-color: green; }
+    100% { background-color: white; }
+}
+
 body, html {
     margin: 0;
     padding: 0;
@@ -62,6 +81,7 @@ nav ul li a {
 
 .content {
     max-width: 600px;
+    animation: fadeInUp 1s ease-out;
 }
 
 #bubble {
@@ -72,6 +92,7 @@ nav ul li a {
     position: fixed;
     pointer-events: none;
     transform: translate(-50%, -50%);
-    transition: transform 0.1s ease;
+    transition: transform 0.1s ease, background-color 0.5s ease;
     z-index: 1000;
+    animation: bubbleColorChange 2s infinite;
 }
